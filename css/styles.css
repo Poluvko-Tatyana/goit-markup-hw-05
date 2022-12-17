@@ -93,8 +93,10 @@ body{
 .nav:focus {
     color: var(--color-button-nav);
 }
-
-.nav::after{
+.nav.link.current{
+    color: var(--color-button-nav);
+}
+.nav.link.current::after{
     content:'';
     position: absolute;
     bottom: 0;
@@ -103,12 +105,8 @@ body{
     height: 4px;
     background-color: var(--color-button-nav);
     border-radius: 2px;
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
-.nav:hover:after{
-    opacity: 1;
-}
+
 .heder-text{
     color: var(--color-text-paragraph);
     text-decoration: none;
@@ -118,6 +116,7 @@ body{
     letter-spacing: 0.02em;
     display: flex;
     gap: 10px;
+    align-items: center;
     fill: var(--color-text-paragraph);
 }
 
