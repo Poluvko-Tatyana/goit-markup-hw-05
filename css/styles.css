@@ -10,6 +10,7 @@
     --color-border: #EEEEEE;
     --color-border-heder: #ECECEC;
     --color-icon: #AFB1B8;
+    --color-button:  #188CE8;
 }
 
 .container{
@@ -193,8 +194,14 @@ body{
     border: var(--color-button-nav);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.button:hover,
+.button:focus{
+    background-color:var(--color-button);
+}
 
 /*Наші переваги*/
 .advantages{
@@ -353,7 +360,7 @@ body{
 }
 .customers-list:hover,
 .customers-list:focus{
-    border: 1px solid var(--color-button-nav);
+    border-color: var(--color-button-nav);
     border-radius: 4px;
     fill: var(--color-button-nav);
 }
@@ -437,7 +444,7 @@ body{
 }
 .box-oll:hover,
 .box-oll:focus{
-    border: 1px solid #EEEEEE;
+    border-color: var(--color-border);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -564,8 +571,9 @@ margin-top: 12px;
     background-color: var(--color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 8px 8px 0 0;
-    transition: transform 500ms;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden .modal{
     transform: translate(-50%, -50%) scale(50%);
@@ -577,6 +585,9 @@ margin-top: 12px;
     visibility: hidden;
 }
 .modal-button{
+    position: absolute;
+    right: 8px;
+    top:8px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     width: 30px;
@@ -584,5 +595,5 @@ margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
+    cursor: pointer;
 }
